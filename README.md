@@ -76,7 +76,7 @@ Iterates the event schedule, fetches qualifying results per round, keeps “Gran
 #### • 'fetch_quali_results(year, gp_id)'
 Pulls Q1/Q2/Q3 from session.results, converts to seconds, and computes best_sec = min(Q1, Q2, Q3).
 
-#### • 'fit_model(df)'
+ 'fit_model(df)'
  • ColumnTransformer:
  
  • One-hot: Team, Driver, CircuitShortName
