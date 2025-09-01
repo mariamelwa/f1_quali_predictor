@@ -20,7 +20,7 @@ Predicts each driver’s best qualifying lap (minimum of Q1/Q2/Q3) using multi-s
 
 ## Requirements
 
-Python 3.9+
+• Python 3.9+
 
 ### Packages:
 
@@ -70,19 +70,19 @@ On first run, FastF1 will cache data under cache/ and may take a few minutes.
 
 ## How it works (brief)
 
-#### • build_training_set(years=(2022, 2023, 2024))
+#### • 'build_training_set(years=(2022, 2023, 2024))'
 Iterates the event schedule, fetches qualifying results per round, keeps “Grand Prix” events only.
 
-#### • fetch_quali_results(year, gp_id)
+#### • 'fetch_quali_results(year, gp_id)'
 Pulls Q1/Q2/Q3 from session.results, converts to seconds, and computes best_sec = min(Q1, Q2, Q3).
 
-#### • fit_model(df)
-• ColumnTransformer:
-
-• One-hot: Team, Driver, CircuitShortName
-
-• Pass-through: Year
-Then fits a Ridge model and prints hold-out metrics.
+#### • 'fit_model(df)'
+ • ColumnTransformer:
+ 
+ • One-hot: Team, Driver, CircuitShortName
+ 
+ • Pass-through: Year
+ Then fits a Ridge model and prints hold-out metrics.
 
 #### predict_interlagos(model, lineup, year=2025)
 Builds an inference frame for Sao Paulo Grand Prix and returns ranked predictions.
@@ -103,7 +103,7 @@ Find its EventName as it appears in FastF1 schedules (e.g., “Bahrain Grand Pri
 
 ### Change the lineup
 
-• Edit the #### sao_paulo_2025 dict in __main__ with:
+• Edit the ### sao_paulo_2025 dict in __main__ with:
 ```bash
  "Driver Name": "Team Name" pairs.
 ```
