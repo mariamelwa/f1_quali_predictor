@@ -99,11 +99,11 @@ data = build_training_set(years=(2021, 2022, 2023, 2024))
 
 The example targets Sao Paulo Grand Prix. To predict another race:
 
-Find its ### EventName as it appears in FastF1 schedules (e.g., “Bahrain Grand Prix”, “Japanese Grand Prix”).
+Find its  EventName as it appears in FastF1 schedules (e.g., “Bahrain Grand Prix”, “Japanese Grand Prix”).
 
 ### Change the lineup
 
-• Edit the ### sao_paulo_2025 dict in __main__ with:
+• Edit the  sao_paulo_2025 dict in __main__ with:
 ```bash
  "Driver Name": "Team Name" pairs.
 ```
