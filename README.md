@@ -1,4 +1,4 @@
-🏎️ F1 Qualifying Pace Predictor (Q1–Q3 best lap)
+## 🏎️ F1 Qualifying Pace Predictor (Q1–Q3 best lap)
 
 F1 Qualifying Pace Predictor using FastF1 and scikit-learn. Fetches multi-season qualifying data, trains a Ridge Regression model on drivers, teams, and circuits, and predicts best lap times for future GPs (e.g., São Paulo 2025). Data-driven insights into qualifying performance.
 
@@ -6,7 +6,7 @@ F1 Qualifying Pace Predictor using FastF1 and scikit-learn. Fetches multi-season
 
 Predicts each driver’s best qualifying lap (minimum of Q1/Q2/Q3) using multi-season data from FastF1 and a Ridge Regression model (scikit-learn). Example included for São Paulo (Interlagos) 2025.
 
-##Features
+## Features
 
 Auto-fetch official qualifying data via FastF1
 
@@ -18,7 +18,7 @@ Train Ridge model; report MAE and R²
 
 Predict + rank best quali lap for a provided lineup
 
-##Requirements
+## Requirements
 
 Python 3.9+
 
@@ -26,45 +26,49 @@ Packages:
 
 ```bash
 pip install fastf1 scikit-learn pandas numpy matplotlib
+```
 
 Quick start
 
-Clone the repo and enter the folder:
+# 1. Clone the repo and enter the folder:
 
 ```bash
 git clone <your-repo-url>
 cd <repo-folder>
+```b
 
-
-Create a venv:
+# 2. Create a venv:
 ```bash
 python -m venv .venv
 # Windows
 .venv\Scripts\activate
 # macOS/Linux
 source .venv/bin/activate
+```
 
 
-Install deps:
+# 3. Install dependencies:
 ```bash
 pip install fastf1 scikit-learn pandas numpy matplotlib
+```
 
 
-Run the script:
+# 4.Run the script:
 ```bash
 python f1_quali_predictor.py
+```
 
 
 On first run, FastF1 will cache data under cache/ and may take a few minutes.
 
-Output
+## Output
 
 Logs for dataset building & validation metrics
 
 A ranked table of predicted best qualifying laps for the sample São Paulo 2025 lineup
 
 
-How it works (brief)
+## How it works (brief)
 
 build_training_set(years=(2022, 2023, 2024))
 Iterates the event schedule, fetches qualifying results per round, keeps “Grand Prix” events only.
@@ -83,7 +87,7 @@ Then fits a Ridge model and prints hold-out metrics.
 predict_interlagos(model, lineup, year=2025)
 Builds an inference frame for Sao Paulo Grand Prix and returns ranked predictions.
 
-Customize
+## Customize
 Train on different seasons
 
 Edit the call in __main__:
