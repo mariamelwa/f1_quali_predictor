@@ -70,19 +70,19 @@ On first run, FastF1 will cache data under cache/ and may take a few minutes.
 
 ## How it works (brief)
 
-#### • 'build_training_set(years=(2022, 2023, 2024))'
+#### • build_training_set(years=(2022, 2023, 2024))
 Iterates the event schedule, fetches qualifying results per round, keeps “Grand Prix” events only.
 
-#### • 'fetch_quali_results(year, gp_id)'
+#### • fetch_quali_results(year, gp_id)
 Pulls Q1/Q2/Q3 from session.results, converts to seconds, and computes best_sec = min(Q1, Q2, Q3).
 
- 'fit_model(df)'
- • ColumnTransformer:
- 
- • One-hot: Team, Driver, CircuitShortName
- 
- • Pass-through: Year
- Then fits a Ridge model and prints hold-out metrics.
+ #### •fit_model(df)
+          • ColumnTransformer:
+          
+          • One-hot: Team, Driver, CircuitShortName
+          
+          • Pass-through: Year
+          Then fits a Ridge model and prints hold-out metrics.
 
 #### predict_interlagos(model, lineup, year=2025)
 Builds an inference frame for Sao Paulo Grand Prix and returns ranked predictions.
@@ -99,7 +99,7 @@ data = build_training_set(years=(2021, 2022, 2023, 2024))
 
 The example targets Sao Paulo Grand Prix. To predict another race:
 
-Find its EventName as it appears in FastF1 schedules (e.g., “Bahrain Grand Prix”, “Japanese Grand Prix”).
+Find its ### EventName as it appears in FastF1 schedules (e.g., “Bahrain Grand Prix”, “Japanese Grand Prix”).
 
 ### Change the lineup
 
